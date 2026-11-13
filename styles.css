@@ -198,12 +198,12 @@ footer.plain .wrap{border-top-color:var(--line)}
 @keyframes settle{from{opacity:0;transform:translateY(24px)}}
 /* experience: career line */
 .metro{position:relative;padding-top:56px}
-.zones{position:absolute;top:0;left:0;right:0;display:grid;grid-template-columns:1fr 1fr}
+.zones{position:absolute;top:0;left:0;right:0;display:grid;grid-template-columns:3fr 4fr}
 .zone{justify-self:start;font-size:13px;font-weight:600;color:var(--walnut);padding:6px 14px;border-radius:999px;background:#fff;border:1px solid var(--line)}
 .zones .zone:last-child{margin-left:12px}
-.metro::after{content:"";position:absolute;left:50%;top:0;height:240px;border-left:2px dashed var(--sage-deep);pointer-events:none}
-.track{position:absolute;left:calc(100%/12);right:calc(100%/12);top:77px;height:10px;border-radius:10px;background:var(--moss)}
-.stops{list-style:none;display:grid;grid-template-columns:repeat(6,1fr);position:relative}
+.metro::after{content:"";position:absolute;left:calc(100%*3/7);top:0;height:240px;border-left:2px dashed var(--sage-deep);pointer-events:none}
+.track{position:absolute;left:calc(100%/14);right:calc(100%/14);top:77px;height:10px;border-radius:10px;background:var(--moss)}
+.stops{list-style:none;display:grid;grid-template-columns:repeat(7,1fr);position:relative}
 .stop-btn{all:unset;box-sizing:border-box;display:flex;flex-direction:column;align-items:center;text-align:center;width:100%;padding:0 8px 12px;cursor:pointer;border-radius:12px}
 .stop-btn:focus-visible{outline:2px solid var(--walnut);outline-offset:2px}
 .dot{width:28px;height:28px;margin:12px 0 14px;border-radius:50%;background:var(--paper);border:5px solid var(--moss);position:relative;z-index:1;transition:transform .2s,background .2s}
