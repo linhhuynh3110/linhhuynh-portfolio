@@ -224,14 +224,17 @@ footer.plain .wrap{border-top-color:var(--line)}
 .key-row{display:flex;gap:18px;justify-content:center;margin-top:18px;font-size:13px;color:var(--stone)}
 @media (max-width:760px){
   .metro{padding-top:0}
-  .zones,.metro::after,.track,.stop-panel{display:none}
-  .stops{grid-template-columns:1fr;border-left:6px solid var(--moss);margin-left:14px}
+  .zones,.metro::after,.track,.stop-panel,.desk-only{display:none}
+  .stops{display:flex;flex-direction:column-reverse;border-left:6px solid var(--moss);margin-left:14px}
   .stop{padding:0 0 28px 26px;position:relative}
-  .stop.moved{margin-top:28px}
-  .stop.moved::before{content:"Moved to Melbourne";position:absolute;top:-30px;left:20px;font-size:12px;font-weight:600;color:var(--walnut)}
+  .stop.moved{margin-bottom:30px}
+  .stop.moved::after{content:"Moved to Melbourne";position:absolute;bottom:-14px;left:26px;font-size:12px;font-weight:600;color:var(--walnut)}
   .stop-btn{align-items:flex-start;text-align:left;padding:0;cursor:default}
   .dot,.big .dot{position:absolute;left:-23px;top:-2px;margin:0;width:24px;height:24px}
   .stop-yr{display:none}
+  .stop-btn[aria-pressed="true"] .dot{transform:none;background:var(--paper);border-color:var(--moss)}
+  .stu .stop-btn[aria-pressed="true"] .dot{border-color:var(--walnut)}
+  .big .stop-btn[aria-pressed="true"] .dot{background:var(--sage)}
   .stop-title,.stop-org{display:none}
   .stop-detail{display:block}
   .stop-detail h3{font:600 19px/1.3 var(--display);margin:2px 0}
