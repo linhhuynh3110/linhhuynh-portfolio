@@ -283,5 +283,10 @@ footer.plain .wrap{border-top-color:var(--line)}
 .tablet img{width:100%;height:100%;object-fit:contain;background:#fff}
 .tablet ~ .thumbs .thumb{width:46px;height:58px}
 @media (max-width:900px){.proj-grid{grid-template-columns:1fr}.proj.wide{grid-template-columns:1fr;gap:20px}}
+.gallery{columns:auto;display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.gallery figure{margin:0}
+.gallery .ph{aspect-ratio:3/4}
+.gallery .ph img{height:100%;object-fit:cover}
+@media (max-width:760px){.gallery{grid-template-columns:1fr 1fr;gap:12px}}
 .contact-end{padding:96px 0 80px}
 .contact-end h2{font-size:clamp(40px,6vw,72px)}
